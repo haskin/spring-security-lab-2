@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class BitcoinDTO {
+public class CryptoDTO {
     @JsonProperty("data")
     private DataDTO data;
 }
