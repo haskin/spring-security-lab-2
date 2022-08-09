@@ -11,4 +11,7 @@ public class CryptoService {
         return String.format(CryptoService.API_URL, cryptoName);
     }
 
+    public String getApiUrl() {
+        return String.format(CryptoService.API_URL, "bitcoin");
+    }
 }

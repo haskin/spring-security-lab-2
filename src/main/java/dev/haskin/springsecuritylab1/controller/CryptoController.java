@@ -34,7 +34,7 @@ public class CryptoController {
     }
 
     @GetMapping
-    String getOneBitcoin() throws ResponseStatusException {
+    String getCostOfOneBitcoin() throws ResponseStatusException {
         CryptoDTO cryptoDTO = Optional
                 .ofNullable(restTemplate.getForObject(cryptoService.getApiUrl("bitcoin"),
                         CryptoDTO.class))
