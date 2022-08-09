@@ -12,33 +12,34 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
 
 import dev.haskin.springsecuritylab1.dto.CryptoDTO;
+import dev.haskin.springsecuritylab1.service.CryptoService;
 
 @RestController
-@RequestMapping("/crypto")
+@RequestMapping("crypto")
 public class CryptoController {
 
-    private static final String API_URL = "https://api.coincap.io/v2/assets/bitcoin";
+    @Autowired
+    private CryptoService cryptoService;
 
     @Autowired
     private RestTemplate restTemplate;
 
-    @GetMapping
+    @GetMapping("/{cryptoName}")
     String getCryptoByName(@PathVariable String cryptoName) throws ResponseStatusException {
-        CryptoDTO cryptoDTO = Optional.ofNullable(restTemplate.getForObject(API_URL, CryptoDTO.class))
+        CryptoDTO cryptoDTO = Optional
+                .ofNullable(restTemplate.getForObject(cryptoService.getApiUrl(cryptoName), CryptoDTO.class))
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
-                        "Could not connect to Bitcoin API"));
+                        "Could not connect to Crypto API"));
         return cryptoDTO.getData().getPriceUsd();
     }
 
     @GetMapping
-    String getCostOfOneBitcoin() throws ResponseStatusException {
-        CryptoDTO cryptoDTO = Optional.ofNullable(restTemplate.getForObject(API_URL, CryptoDTO.class))
+    String getOneBitcoin() throws ResponseStatusException {
+        CryptoDTO cryptoDTO = Optional
+                .ofNullable(restTemplate.getForObject(cryptoService.getApiUrl("bitcoin"),
+                        CryptoDTO.class))
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
                         "Could not connect to Bitcoin API"));
         return cryptoDTO.getData().getPriceUsd();
-    }
-
-    public static String getApiUrl() {
-        return API_URL;
     }
 }
