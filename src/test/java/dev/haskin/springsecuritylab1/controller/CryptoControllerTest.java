@@ -33,7 +33,8 @@ public class CryptoControllerTest {
     void testGetCostOfOneBitcoin() {
         // System.out.println(cryptoService.getApiUrl());
         String expectedPrice = "20_000";
-        DataDTO dataDTO = new DataDTO(expectedPrice);
+        DataDTO dataDTO = new DataDTO();
+        dataDTO.setPriceUsd(expectedPrice);
         CryptoDTO bitcoinDTO = new CryptoDTO(dataDTO);
         when(restTemplate.getForObject(cryptoService.getApiUrl(), CryptoDTO.class)).thenReturn(bitcoinDTO);
         assertEquals(expectedPrice, cryptoController.getCostOfOneBitcoin());
