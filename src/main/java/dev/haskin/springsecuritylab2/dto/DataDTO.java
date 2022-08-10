@@ -1,4 +1,4 @@
-package dev.haskin.springsecuritylab1.dto;
+package dev.haskin.springsecuritylab2.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

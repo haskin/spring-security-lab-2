@@ -16,9 +16,10 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
 
-import dev.haskin.springsecuritylab1.dto.CryptoDTO;
-import dev.haskin.springsecuritylab1.dto.DataDTO;
-import dev.haskin.springsecuritylab1.service.CryptoService;
+import dev.haskin.springsecuritylab2.controller.CryptoController;
+import dev.haskin.springsecuritylab2.dto.CryptoDTO;
+import dev.haskin.springsecuritylab2.dto.DataDTO;
+import dev.haskin.springsecuritylab2.service.CryptoService;
 
 @ExtendWith(MockitoExtension.class)
 public class CryptoControllerTest {

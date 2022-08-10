@@ -1,4 +1,4 @@
-package dev.haskin.springsecuritylab1.service;
+package dev.haskin.springsecuritylab2.service;
 
 import org.springframework.stereotype.Service;
 

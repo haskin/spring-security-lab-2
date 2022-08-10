@@ -1,4 +1,4 @@
-package dev.haskin.springsecuritylab1.configuration;
+package dev.haskin.springsecuritylab2.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
