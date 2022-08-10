@@ -25,10 +25,15 @@ public class SecurityConfiguration {
                 .and()
                 .httpBasic();
 
+        // http.authorizeRequests()
+        // .anyRequest()
+        // .permitAll();
+
         http.authorizeRequests()
                 .anyRequest()
-                .permitAll();
-
+                .authenticated()
+                .and()
+                .oauth2Login();
         return http.build();
     }
 

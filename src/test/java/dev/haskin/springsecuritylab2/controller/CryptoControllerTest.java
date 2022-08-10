@@ -1,4 +1,4 @@
-package dev.haskin.springsecuritylab1.controller;
+package dev.haskin.springsecuritylab2.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

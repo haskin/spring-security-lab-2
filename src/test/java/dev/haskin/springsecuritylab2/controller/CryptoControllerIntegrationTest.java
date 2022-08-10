@@ -1,4 +1,4 @@
-package dev.haskin.springsecuritylab1.controller;
+package dev.haskin.springsecuritylab2.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;

@@ -47,7 +47,6 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
 		<dependency>
     <groupId>org.springframework.security</groupId>
     <artifactId>spring-security-oauth2-resource-server</artifactId>
@@ -60,7 +59,8 @@
     <groupId>org.springframework.security</groupId>
     <artifactId>spring-security-oauth2-client</artifactId>
 </dependency>
-	<build>
+</dependencies>
+		<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

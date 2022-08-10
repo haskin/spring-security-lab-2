@@ -1,10 +1,10 @@
-package dev.haskin.springsecuritylab1;
+package dev.haskin.springsecuritylab2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Springsecuritylab1ApplicationTests {
+class Springsecuritylab2ApplicationTests {
 
 	@Test
 	void contextLoads() {
