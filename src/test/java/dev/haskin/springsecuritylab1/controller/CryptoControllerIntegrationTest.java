@@ -19,6 +19,15 @@ public class CryptoControllerIntegrationTest {
     private MockMvc mockMvc;
 
     @Test
+    void shouldReturnCryptoFromName() throws Exception {
+
+        mockMvc.perform(get("/crypto/bitcoin"))
+                .andDo(print())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
+
+    @Test
     void shouldGetBitcoinPrice() throws Exception {
         mockMvc.perform(get("/crypto"))
                 .andDo(print())
